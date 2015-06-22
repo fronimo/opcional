@@ -39,3 +39,30 @@ remplaza un atom con el valor d otro en una lista
 resultado  
 
 (p b l b)
+
+
+15.-
+
+retorna una lista sin el segundo nivel
+
+
+(define lst2 (list 1 (3 3 3) (2 2 2) 2))
+
+(define (remlevel lst2)
+    (if (null? (cdr (car lst2))); verifica si existe segundo nivel
+        (remlevel (cdr lst)); de no existis va a la siguiente pos
+        (list (list (car lst2) (cdr(cdr lst2)) (remlevel (cdr lst2))); si existe elimina la sub lista
+
+(write (remlevel lst2))
+
+
+20.-
+
+recursiva por atras
+
+(define (doit n alm)
+	    (if (= n 0); si es 0 retorna acc
+	        alm
+	        (doit (- n 1) (+ n alm); guarda los valores de la suma en alm
+	    )
+	)
