@@ -61,7 +61,7 @@ retorna una lista sin el segundo nivel
 recursiva por atras
 
 (define (doit n alm)
-	    (if (= n 0); si es 0 retorna acc
+	    (if (= n 0); si es 0 retorna alm
 	        alm
 	        (doit (- n 1) (+ n alm); guarda los valores de la suma en alm
 	    )
