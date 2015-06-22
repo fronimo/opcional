@@ -1,0 +1,18 @@
+cuenta cuantos 0 hay en una lista
+
+
+(define lst1 (list 0 0 1))
+
+(define (cuenta list)
+  [cond
+    [(null? list) 0] ; si la lista es vacia retorna 0
+    [(= (first list) 0) (+ 1 (cuenta (rest list)))] ; compara el primer valor, si es 0 aumenta contador 
+    [else (cuenta (rest list))] ; si no pasa a la siguiente pos
+  ]
+)
+
+(write (cuenta lst1))
+
+resultado 
+
+(0 0 1)2
