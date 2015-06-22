@@ -1,3 +1,5 @@
+5.-
+
 cuenta cuantos 0 hay en una lista
 
 
@@ -16,3 +18,24 @@ cuenta cuantos 0 hay en una lista
 resultado 
 
 (0 0 1)2
+
+10.-
+
+remplaza un atom con el valor d otro en una lista
+
+
+(define (replace v1 v2 lst)
+      (if (null? lst ) '()
+          (if (eqv? (car lst) v1) ; compara el primer valor d la lista
+              (cons v2 (replace v1 v2 (cdr lst))) ; si es igual hace el reemplazo
+           (cons (car lst) (replace v1 v2 (cdr lst))) ; caso contrario avanza a la siguiente pos
+          )
+      )
+)
+
+
+(write (replace 'a 'b '(p a l a)))
+
+resultado  
+
+(p b l b)
